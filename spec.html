@@ -175,37 +175,46 @@
     <emu-clause id="sec-type">
       <h1>type</h1>
       <p>set of data values as defined in clause <emu-xref href="#sec-ecmascript-data-types-and-values"></emu-xref> of this specification</p>
+      <p><emu-xref href="#sec-ecmascript-data-types-and-values"></emu-xref>절에 정의된 데이터 값들의 집합</p>
     </emu-clause>
 
     <emu-clause id="sec-primitive-value">
       <h1>primitive value</h1>
       <p>member of one of the types Undefined, Null, Boolean, Number, Symbol, or String as defined in clause <emu-xref href="#sec-ecmascript-data-types-and-values"></emu-xref></p>
+      <p><emu-xref href="#sec-ecmascript-data-types-and-values"></emu-xref>절에 정의된 Undefined, Null, Boolean, Number, Symbol, String 타입 중 하나의 멤버</p>
       <emu-note>
         <p>A primitive value is a datum that is represented directly at the lowest level of the language implementation.</p>
+        <p>primitive value는 언어 구현의 가장 낮은 수준에서 직접 표현되는 자료다.</p>
       </emu-note>
     </emu-clause>
 
     <emu-clause id="sec-terms-and-definitions-object">
       <h1>object</h1>
       <p>member of the type Object</p>
+      <p>Object 타입의 멤버</p>
       <emu-note>
         <p>An object is a collection of properties and has a single prototype object. The prototype may be the null value.</p>
+        <p>객체는 프로퍼티의 집합이고 하나의 프로토타입 객체를 가지고 있다. 프토토타입은 null 일 수 있다.</p>
       </emu-note>
     </emu-clause>
 
     <emu-clause id="sec-constructor">
       <h1>constructor</h1>
       <p>function object that creates and initializes objects</p>
+      <p>객체를 만들고 초기화하는 함수 객체(function object)</p>
       <emu-note>
         <p>The value of a constructor's `prototype` property is a prototype object that is used to implement inheritance and shared properties.</p>
+        <p>생성자(constructor)의 `prototype` 프로퍼티 값은 상속을 구현하고 프로퍼티를 공유하기 위해 사용되는 프로토타입 객체이다.</p>
       </emu-note>
     </emu-clause>
 
     <emu-clause id="sec-terms-and-definitions-prototype">
       <h1>prototype</h1>
       <p>object that provides shared properties for other objects</p>
+      <p>다른 객체에 공유 프로퍼티를 제공하는 객체</p>
       <emu-note>
         <p>When a constructor creates an object, that object implicitly references the constructor's `prototype` property for the purpose of resolving property references. The constructor's `prototype` property can be referenced by the program expression <code><var>constructor</var>.prototype</code>, and properties added to an object's prototype are shared, through inheritance, by all objects sharing the prototype. Alternatively, a new object may be created with an explicitly specified prototype by using the `Object.create` built-in function.</p>
+        <p>생성자(constructor)로 객체를 만들 때, 만들어진 객체는 프로퍼티 참조를 해결하기 위해 생성자(constructor)의 `prototype`을 암시적으로 참조한다. 생성자(constructor)의 `prototype` 프로퍼티는 프로그램 표현식 <code><var>constructor</var>.prototype</code>에 의해 참조될 수 있다. 그리고 객체의 프로토타입에 추가된 프로퍼티는 상속을 통해 프로토타입을 공유하는 모든 객체에 공유된다. 또는, `Object.create` 내장 함수로 명시적으로 프로토타입을 지정해 객체를 만들 수 있다.</p>
       </emu-note>
     </emu-clause>
 
@@ -238,6 +247,7 @@
     <emu-clause id="sec-undefined-value">
       <h1>undefined value</h1>
       <p>primitive value used when a variable has not been assigned a value</p>
+      <p>변수에 값이 할당되지 않은 경우 사용되는 primitive value</p>
     </emu-clause>
 
     <emu-clause id="sec-terms-and-definitions-undefined-type">
@@ -258,19 +268,23 @@
     <emu-clause id="sec-terms-and-definitions-boolean-value">
       <h1>Boolean value</h1>
       <p>member of the Boolean type</p>
+      <p>Boolean 타입의 멤버</p>
       <emu-note>
         <p>There are only two Boolean values, *true* and *false*.</p>
+        <p>두개의 Boolean 값만 존재한다, *true* 와 *false*.</p>
       </emu-note>
     </emu-clause>
 
     <emu-clause id="sec-terms-and-definitions-boolean-type">
       <h1>Boolean type</h1>
       <p>type consisting of the primitive values *true* and *false*</p>
+      <p>primitive value, *true* 와 *false*로 구성된 타입</p>
     </emu-clause>
 
     <emu-clause id="sec-boolean-object">
       <h1>Boolean object</h1>
       <p>member of the Object type that is an instance of the standard built-in `Boolean` constructor</p>
+      <p>표준 내장 `Boolean` 생성자(constructor)의 인스턴스인 Object 타입의 멤버</p>
       <emu-note>
         <p>A Boolean object is created by using the `Boolean` constructor in a `new` expression, supplying a Boolean value as an argument. The resulting object has an internal slot whose value is the Boolean value. A Boolean object can be coerced to a Boolean value.</p>
       </emu-note>
@@ -370,8 +384,10 @@
     <emu-clause id="sec-method">
       <h1>method</h1>
       <p>function that is the value of a property</p>
+      <p>프로퍼티의 값인 함수</p>
       <emu-note>
         <p>When a function is called as a method of an object, the object is passed to the function as its *this* value.</p>
+        <p>함수가 객체의 메소드로 호출될 때, 객체는 함수의 *this* 값으로 전달된다.</p>
       </emu-note>
     </emu-clause>
 
